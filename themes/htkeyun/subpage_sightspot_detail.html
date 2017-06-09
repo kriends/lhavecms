@@ -1,0 +1,66 @@
+<!--#include file="header.html"-->
+
+<main class="sp-main1">
+  <div class="bcrumbs-bar">
+    <div class="container bcrumbs pd">
+      <ol>
+        <li class="bcrumbs-node bcn-start">您的位置：  </li>
+        <li class="bcrumbs-node color1"><a href="/"> 首页  </a></li>
+        <li class="bcrumbs-node"><a href="javascript:void(0);">景点介绍</a></li>
+        <li class="bcrumbs-node active"><a href="javascript:void(0);">景点详细</a></li>
+      </ol>
+    </div>
+  </div>
+	<div class="sp-section">
+		<section class="container sp-panel pd slight-one-detali fn-clearfix">
+			<span class="lt light-dl-pic"><a href="#"><img src="{$contentInfo.image}"/></a></span>
+			<div class="lt light-dl-text">
+				<h2>{$contentInfo.title}</h2>
+				<p class="light-dl-title">景点简介</p>
+				<p>{$contentInfo.description}</p>
+				<p class="light-dl-site">位置：云南省{$contentInfo.class_name}</p>
+			</div>
+		</section>
+	</div>
+  <div class="sp-section sp-message">
+		<div class="container pd">
+			<div class="lt lt-box">
+				<section class="car-messag-panel">
+					<header class="sp-hd car-messag">
+						<p>景点详细</p>
+					</header>
+					<div class="sp-bd sly-silt-bd sly-silt-bd1">
+					  <!-- <img src="images/temp__/slight-detalis_10.jpg"/> -->
+					
+					      {$contentInfo.content}
+					
+					</div>
+				</section>
+			</div>
+			<div class="rt rt-box">
+				<section class="car-messag-panel">
+					<header class="sp-hd car-messag">
+						<p>相关推荐</p>
+					</header>
+					<section class="sp-bd car-messagrt-bd">
+					<!--list{app="lhave" label="contentList" pos_id=3 limit=4}-->
+						<article class="car-messag-list">
+							<a href="javascript:void(0)">
+							 <img src="{$list.image}"/>
+							</a>
+							<div class="car-messag-text"><p>{$list.title}</em></p></div>
+						</article>
+						<!--{/list}-->
+
+					</section>
+				</section>
+			</div>
+		</div>
+	</div>
+</main>
+
+
+<!-- ****** FOOTER ****** -->
+<!--#include file="footer.html"-->
+</body>
+</html>

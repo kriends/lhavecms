@@ -1,0 +1,40 @@
+<form method="post">
+    <div class="panel dux-box">
+        <div class="table-responsive">
+            <table class="table table-hover treetable" id="table">
+           		<thead>
+                    <tr>
+                        <th width="100">编号</th>
+                        <th width="*">车辆名称</th>
+                        <th width="*">车辆单价</th>
+                        <th width="*">排序</th>
+                        <th width="100">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--if{!empty($carList)}-->
+                    <!--loop{$carList as $vo}-->
+                    <tr data-tt-id="{$vo.car_id}"  data-tt-parent-id="{$vo.parent_id}">
+                        <td>{$vo.car_id}</td>
+                        <td>{$vo.name}</td>
+                        <td>{$vo.sale}</td>
+                        <td>{$vo.sequence}</td>
+                        <td>
+                            <a class="button bg-blue button-small icon-pencil" href="{url($vo['app'].'/AdminCar/edit',array('car_id'=>$vo['car_id']))}" title="修改"></a>
+                            <a class="button bg-red button-small icon-trash-o js-del" href="javascript:;" url="{url($vo['app'].'/AdminCar/del')}" data="{$vo.car_id}" title="删除"></a>
+                        </td>
+                    </tr>
+
+                    <!--{/loop}-->
+                    <!--{/if}-->
+                </tbody>
+            </table>
+        </div>
+    </div>
+</form>
+<script>
+    Do.ready('base','treetable', function () {
+       $('#table').duxTable({});
+       $("table").treetable({ expandable: true });
+    });
+</script>

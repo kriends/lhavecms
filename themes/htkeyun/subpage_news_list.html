@@ -1,0 +1,87 @@
+<!--#include file="header.html"-->
+
+
+
+
+<main class="sp-main1">
+  <div class="bcrumbs-bar">
+    <div class="container bcrumbs">
+      <ol>
+        <li class="bcrumbs-node bcn-start">您的位置：  </li>  
+        <li class="bcrumbs-node color1"><a href="/"> 首页  </a></li>
+        <li class="bcrumbs-node active"><a href="javascript:void(0);">新闻资讯</a></li>
+      </ol>
+    </div>
+  </div>
+	<div class="sp-section sp-message news">
+		<div class="container pd">
+			<div class="lt lt-box">
+				<section class="sp-news-panel">
+				<!--foreach{$pageList as $list}-->                 
+					<article class="sp-news-list">
+						<a href="{$list.aurl}" class="fn-clearfix">
+							<span class="news-pic lt"><img src="{$list.image}"/></span>
+							<div class="lt new-list-text">
+								<h2>{$list.title}</h2>
+								<p>{$list.description}</p>
+								<em>{date('Y-m-d H:i:s',$list.time)}</em>
+							</div>
+						</a>
+					</article>
+					<!--{/foeach}-->
+					
+					
+					  <nav class="sp-pagenav sp-pagenav-s1 pt-30 pb-20">
+							<ul class="pagination sp-pagination">
+
+
+								 <li class="pn-item">{$page}</a></li>
+
+							</ul>
+
+					
+          </nav>
+
+
+
+
+				</section>
+			</div>
+			<div class="rt rt-box">
+				<section class="car-messag-panel">
+					<header class="sp-hd car-messag">
+						<p>新闻推荐</p>
+					</header>
+					<section class="sp-bd news-rmd">
+						<ul class="news-rmd-item">
+
+						<!--list{app="lhave" label="contentList" pos_id=2 limit=4}-->
+
+							<li class="news-rmd-list">
+								<a href="{$list.aurl}">
+									<h3>{$list.title}</h3>
+									<p>{$list.description}</p>
+								</a>
+							</li>
+							<!--{/list}-->
+
+						</ul>
+						
+			
+					</section>
+				</section>
+			</div>
+		</div>
+	</div>
+</main>
+
+
+<!-- ****** FOOTER ****** -->
+<!--#include file="footer.html"-->
+<script>
+$app.common_module = ['common'];
+$app.controller = 'homepage';
+seajs.use($app.entrance);
+</script>
+</body>
+</html>

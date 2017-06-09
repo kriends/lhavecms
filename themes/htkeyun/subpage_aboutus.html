@@ -1,0 +1,62 @@
+<!--#include file="header.html"-->
+
+<main class="sp-main1">
+	<div class="sp-section aboutus-banner">
+		<section class="container sp-panel pd aboutus-item">
+			<div class="aboutus-ban-pic"><img src="images/subpage/aboutus-ban_03.png"/></div>
+			<div class="at-bg"></div>
+		</section>
+	</div>
+	<div class="aboutus-content">
+		<div class="container pd ">
+			<div class="aboutus-content-lt lt">
+				<section class="aslide-nav">
+					<div class="aslide-nav-title">
+						<span><img src="images/homepage/us-title_03.png"/></span>
+					</div>
+					<ul class="aslide-nav-item">
+				     	<!--list{app="lhave" label="categoryList" parent_id=25 order="sequence asc"}-->
+				        <!--if{$list['class_id']==$categoryInfo['class_id']}-->
+						<li class="aslide-nav-list current"><a href="{$list.curl}">{$list.name}</a></li>
+						<!--{else}-->
+						<li class="aslide-nav-list "><a href="{$list.curl}">{$list.name}</a></li>
+						<!--{/if}-->
+						<!--{/list}-->
+					</ul>
+				</section>
+			</div>
+		  <div class="aboutus-content-rt lt">
+		  <section class="aboutus-content-box">
+					<div class="abt-bd">
+					{$categoryInfo.content}
+					</div>
+		  </section>
+
+		    <!--list{app="lhave" label="categoryList" parent_id=25}-->
+		    <!--if{$list['class_id']==$categoryInfo['class_id']}-->
+		    <section class="aboutus-content-box" style="display: none;">
+					<header class="abt-hd">
+						<h3>{$list.name}</h3>
+					</header>
+					<div class="abt-bd">
+					{$list.content}
+				
+					</div>
+				</section>
+				<!--{/if}-->
+				<!--{/list}-->
+
+		  </div>
+		</div>
+	</div>
+
+</main>
+
+<!-- ****** FOOTER ****** -->
+<!--#include file="footer.html"-->
+
+
+	<script src="js/library/jquery.min.js"></script>
+	<script src="js/subpage.js"></script>
+</body>
+</html>

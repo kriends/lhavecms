@@ -1,0 +1,71 @@
+<!--#include file="header.html"-->
+
+
+
+
+
+<div class="g-wrapper care-banner">
+	<section class="container sp-banner-cont">
+		<form action="" class="form-care">
+			<div class="form-group01 fn-clearfix">
+				<div class="u-text"><input type="text" placeholder="请输入预定时的手机号" class="txt" /></div>
+				<input type="button" value="预订查询" class="sh-ubtn" />
+			</div>
+		</form>
+	</section>
+</div>
+<main class="sp-main">
+	<div class="container sp-banner-cont">
+		<section class="sp-wrape reserve">
+			<header class="sp-hd">
+				<h2>正规旅游车  合法资质保障</h2>
+				<p>专业化团队，强大系统支持，全国化网络，24小时服务。</p>
+			</header>
+			<ul class="sp-bd sp-reserve-item fn-clearfix">
+
+			<!--list{app="car" label="carInfo" parent_id=0}-->
+             
+				<li class="sp-reserve-list">
+					<a class="re-pict" href="{$list.url}"><img src="{$list.image}"/></a>
+					<div class="re-price-content">
+						<p class="ever-price">￥{$list.sale}/<em>/每日起</em></p>
+						<p class="car-name">{$list.name}</p>
+						<p class="p-num">乘坐人数：  30人/39人/50人 /59人</p>
+						<a href="subpage_infor.html" class="order-link">立即预约</a>
+						<div class="sp-boder"></div>
+					</div>
+				</li>
+				<!--{/list}-->
+				<!-- <li class="sp-reserve-list">
+					<a class="re-pict" href="javascript:void:(0)"><img src="images/temp__/reserve_03.jpg"/></a>
+					<div class="re-price-content">
+						<p class="ever-price">￥450.00/<em>/每日起</em></p>
+						<p class="car-name">宇通客车</p>
+						<p class="p-num">乘坐人数：  30人/39人/50人 /59人</p>
+						<a href="#" class="order-link">立即预约</a>
+						<div class="sp-boder"></div>
+					</div>
+				</li>
+				<li class="sp-reserve-list">
+					<a class="re-pict" href="javascript:void:(0)"><img src="images/temp__/reserve_03.jpg"/></a>
+					<div class="re-price-content">
+						<p class="ever-price">￥450.00/<em>/每日起</em></p>
+						<p class="car-name">宇通客车</p>
+						<p class="p-num">乘坐人数：  30人/39人/50人 /59人</p>
+						<a href="#" class="order-link">立即预约</a>
+						<div class="sp-boder"></div>
+					</div>
+				</li> -->
+			</ul>
+		</section>
+	</div>
+</main>
+	<script src="js/library/jquery.min.js"></script>
+	<script src="js/library/jquery_plugins/jquery.placeholder.min.js"></script>
+	<script type="text/javascript">
+   $(function(){ $('input, textarea').placeholder(); });
+  </script>
+<!-- ****** FOOTER ****** -->
+<!--#include file="footer.html"-->
+</body>
+</html>

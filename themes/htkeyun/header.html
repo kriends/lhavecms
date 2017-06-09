@@ -1,0 +1,59 @@
+<!doctype html>
+<!--[if lt IE 7 ]><html class="ie6 homepage no-js" lang="zh-CN"><![endif]-->
+<!--[if IE 7 ]><html class="ie7 homepage no-js" lang="zh-CN"><![endif]-->
+<!--[if IE 8 ]><html class="ie8 homepage no-js" lang="zh-CN"><![endif]-->
+<!--[if IE 9 ]><html class="ie9 homepage no-js" lang="zh-CN"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html class="homepage no-js" lang="zh-CN"><!--<![endif]-->
+<head>
+<title>{$sys.site_title}</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta name="renderer" content="webkit">
+<meta name="author" content="LHVE TEAM, www.lhave.com">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<script src="js/modernizr.min.js"></script>
+<link href="css/general.css" rel="stylesheet" type="text/css">
+<link href="css/res/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="css/subpage.css" rel="stylesheet" type="text/css">
+
+<!--[if lt IE 9]>
+<script src="js/library/html5shiv.js"></script>
+<script src="js/library/respond.js"></script>
+<![endif]-->
+<script id="seajsnode" charset="utf-8" src="js/sea.min.js"></script>
+<script src="js/general.config.js"></script>
+</head>
+<body>
+<header id="global_header" class="g-header">
+  <div class="container g-header-con">
+    <h1 class="g-header-logo">
+      <a href="__ROOT__" class="u-lnk"><span>寻学库教育培训平台</span></a>
+    </h1>
+    <nav class="g-navbar">
+			<ul class="listnavs-grp">
+
+			<!--if{$categoryInfo['class_id']==null}-->
+			<li class="listnav-item current"><a href="__ROOT__">首页<i></i></a></li>
+			<!--{else}-->
+			<li class="listnav-item"><a href="__ROOT__">首页<i></i></a></li>
+			<!--{/if}-->
+
+			<!--list{app="lhave" label="categoryList" parent_id=0 order="sequence asc"}-->
+			
+			<!--if{$list['class_id']==$categoryInfo['class_id']}-->
+			<li class="listnav-item current"><a href="{$list.curl}">{$list.name}<i></i></a></li>
+			<!--{else}-->	
+			<li class="listnav-item"><a href="{$list.curl}">{$list.name}<i></i></a></li>		
+			<!--{/if}-->
+            <!--{/list}-->
+				
+			</ul>
+		</nav>
+    <div class="g-hd-telp"><p><i></i>{$sys.phone}</p></div>
+  </div>
+</header>

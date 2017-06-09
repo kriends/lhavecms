@@ -1,0 +1,76 @@
+<!--#include file="header.html"-->
+
+
+<main class="sp-main1">
+  <div class="bcrumbs-bar">
+    <div class="container bcrumbs pd">
+      <ol>
+        <li class="bcrumbs-node bcn-start">您的位置：  </li>
+        <li class="bcrumbs-node color1"><a href="/"> 首页  </a></li>
+        <li class="bcrumbs-node active"><a href="javascript:void(0);">景点介绍</a></li>
+      </ol>
+    </div>
+  </div>
+	<div class="sp-section">
+		<section class="container sp-panel pd">
+			<header class="sight-hd">
+				<ul class="sight-hd-item fn-clearfix"> 
+
+		
+					<li<!--if{$categoryInfo.class_id==26 }--> class="current"<!--{/if}-->><a href="{url('article/Category/index', array('class_id'=>26))}">全部</a></li>
+
+
+
+					<!--list{app="lhave" label="categoryList" parent_id=26 }-->
+					<!--if{$list['class_id']==$categoryInfo['class_id']}-->
+
+                    <li class="current"><a href="{$list.curl}">{$list.name}</a></li>
+                    <!--{else}-->
+                    <li><a href="{$list.curl}">{$list.name}</a></li>
+                    <!--{/if}-->
+                    <!--{/list}-->
+
+				</ul>
+			</header>
+
+			<div class="slight-bd">
+			
+				<ul class="slight-bd-item fn-clearfix">			
+				
+				<!--foreach{$pageList as $vo}-->
+					<li onClick="slight-bd-list">
+						<a href="{$vo.aurl}">
+						  <div class="slight-pic">
+								<img src="{$vo.image}"/>
+								<div class="slight-name">
+									<h2>{$vo.title}</h2>
+									<p>—— {$vo.class_name} ——</p>
+								</div>
+						  </div>
+							<div class="slight-text">
+								<p>{$vo.description}</p>
+							</div>
+						</a>
+					</li>
+					<!--{/foreach}-->
+				</ul>
+				
+				<nav class="sp-pagenav sp-pagenav-s1 pt-30 pb-20">
+                   <ul class="pagination sp-pagination">   
+                      <li class="pn-item">{$page}</a></li>
+                   </ul>
+                </nav>
+
+		    </div>
+		</section>
+	</div>
+</main>
+
+<!-- ****** FOOTER ****** -->
+<!--#include file="footer.html"-->
+
+
+<script src="js/library/jquery.min.js"></script>
+<script src="js/subpage.js"></script>
+</body>
+</html>
