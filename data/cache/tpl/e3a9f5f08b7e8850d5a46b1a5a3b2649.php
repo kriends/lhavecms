@@ -1,4 +1,4 @@
-<?php exit;?>0015285159476b550c196927d1b9f70713cb13999e66s:5418:"a:2:{s:8:"template";s:5354:"<form method="post" class="form-x dux-form form-auto" id="form" action="<?php echo url(car/Admincar/edit);?>">
+<?php exit;?>0015285234285aca08120a44fe02d70df9d46b537026s:5399:"a:2:{s:8:"template";s:5335:"<form method="post" class="form-x dux-form form-auto" id="form" action="<?php echo url(car/Admincar/edit);?>">
     <div class="tab dux-tab">
         <div class="panel dux-box  active">
             <div class="panel-head">
@@ -11,13 +11,13 @@
             </div>
             <div class="tab-body">
                 <div class="tab-panel active" id="tab-1">
-                    <div class="form-group" style="display: none">
+                    <div class="form-group">
                         <div class="label">
-                            <label>上级栏目</label>
+                            <label>车辆类别</label>
                         </div>
                         <div class="field">
                             <select class="input" name="car_id">
-                                <option value="0">==顶级栏目==</option>
+                                <option value="0">==最上级类别==</option>
                                 <?php foreach ($categoryList as $vo) { ?>
                                 <?php if ($info['parent_id'] == $vo['car_id']){ ?>
                                 <option value="<?php echo $vo["car_id"];?>" selected>
@@ -28,7 +28,7 @@
                                     <?php } ?>
                             </select>
                             
-                            <div class="input-note">当前栏目的上级栏目</div>
+                            <div class="input-note">当前车辆的上级类别</div>
                         </div>
                     </div>
 
@@ -104,4 +104,4 @@
     Do.ready('base', function () {
         $('#form').duxFormPage();
     });
-</script>";s:12:"compile_time";i:1496979947;}";
+</script>";s:12:"compile_time";i:1496987428;}";

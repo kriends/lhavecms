@@ -22,20 +22,23 @@
 				<p>专业化团队，强大系统支持，全国化网络，24小时服务。</p>
 			</header>
 			<ul class="sp-bd sp-reserve-item fn-clearfix">
+			{$count}
 
-			<!--list{app="car" label="carInfo" parent_id=0}-->
-             
+			
+			<!--loop{$carInfo as $vo}-->
+           
 				<li class="sp-reserve-list">
 					<a class="re-pict" href="{$list.url}"><img src="{$list.image}"/></a>
 					<div class="re-price-content">
-						<p class="ever-price">￥{$list.sale}/<em>/每日起</em></p>
-						<p class="car-name">{$list.name}</p>
+						<p class="ever-price">￥{$vo.sale}/<em>/每日起</em></p>
+						<p class="car-name">{$vo.name}</p>
 						<p class="p-num">乘坐人数：  30人/39人/50人 /59人</p>
 						<a href="subpage_infor.html" class="order-link">立即预约</a>
 						<div class="sp-boder"></div>
 					</div>
 				</li>
-				<!--{/list}-->
+				<!--{/loop}-->
+
 				<!-- <li class="sp-reserve-list">
 					<a class="re-pict" href="javascript:void:(0)"><img src="images/temp__/reserve_03.jpg"/></a>
 					<div class="re-price-content">

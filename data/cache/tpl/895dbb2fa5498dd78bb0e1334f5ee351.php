@@ -1,4 +1,4 @@
-<?php exit;?>001528515810832c886207ed6f94a389ee9a9d02f0afs:5757:"a:2:{s:8:"template";s:5693:"<form method="post" class="form-x dux-form form-auto" id="form" action="<?php echo url(car/Admincar/add);?>">
+<?php exit;?>001528523658ee4e00f016be7a36ff7b127a9e349016s:5768:"a:2:{s:8:"template";s:5704:"<form method="post" class="form-x dux-form form-auto" id="form" action="<?php echo url(car/Admincar/add);?>">
     <div class="tab dux-tab">
         <div class="panel dux-box  active">
             <div class="panel-head">
@@ -11,13 +11,13 @@
             </div>
             <div class="tab-body">
                 <div class="tab-panel active" id="tab-1">
-                    <div class="form-group" style="display: none">
+                    <div class="form-group" >
                         <div class="label">
-                            <label>上级栏目</label>
+                            <label>车辆类别</label>
                         </div>
                         <div class="field">
                             <select class="input" name="parent_id">
-                                <option value="0">==顶级栏目==</option>
+                                <option value="0">==最上级类别==</option>
                                 <?php foreach ($categoryList as $vo) { ?>
                                 <?php if ($info['parent_id'] == $vo['car_id']){ ?>
                                 <option value="<?php echo $vo["car_id"];?>" selected>
@@ -27,13 +27,13 @@
                                         <?php echo $vo["cname"];?></option>
                                     <?php } ?>
                             </select>
-                            <div class="input-note">当前栏目的上级栏目</div>
+                            <div class="input-note">当前车辆的上级类别</div>
                         </div>
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group" style="display: none;">
                         <div class="label">
-                            <label>车辆名称</label>
+                            <label>车辆信息模版</label>
                         </div>
                         <div class="field">
                             <input type="text" class="input" id="url" name="url" size="60" datatype="s" value="subpage_infor">
@@ -112,4 +112,4 @@
     Do.ready('base', function () {
         $('#form').duxFormPage();
     });
-</script>";s:12:"compile_time";i:1496979810;}";
+</script>";s:12:"compile_time";i:1496987658;}";

@@ -51,7 +51,11 @@ class CarController extends SiteController {
         //模板赋值
         $this->assign('contentInfo', $contentInfo);
         $this->assign('carInfo', $carInfo);
-        $this->assign('crumb', $crumb);
+        echo 123132;
+         var_dump($carInfo);
+          $this->display('themes/htkeyun/subpage_car_reserve');
+
+      /*  $this->assign('crumb', $crumb);
         $this->assign('count', $count);
         //$this->assign('page', $page);
         //$this->assign('media', $media);
@@ -62,5 +66,5 @@ class CarController extends SiteController {
         }else{
             $this->siteDisplay($carInfo['car_url']);
         }
-    }
+    }*/
 }

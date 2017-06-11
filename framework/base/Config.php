@@ -25,7 +25,7 @@ class Config {
 						'DB_TYPE' => 'MysqlPdo',
 						'DB_HOST' => 'localhost',
 						'DB_USER' => 'root',
-						'DB_PWD' => '',
+						'DB_PWD' => '123',
 						'DB_PORT' => 3306,
 						'DB_NAME' => 'cp',
 						'DB_CHARSET' => 'utf8',

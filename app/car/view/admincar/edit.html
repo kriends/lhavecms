@@ -11,13 +11,13 @@
             </div>
             <div class="tab-body">
                 <div class="tab-panel active" id="tab-1">
-                    <div class="form-group" style="display: none">
+                    <div class="form-group">
                         <div class="label">
-                            <label>上级栏目</label>
+                            <label>车辆类别</label>
                         </div>
                         <div class="field">
                             <select class="input" name="car_id">
-                                <option value="0">==顶级栏目==</option>
+                                <option value="0">==最上级类别==</option>
                                 <!--loop{$categoryList as $vo}-->
                                 <!--if{$info['parent_id'] == $vo['car_id']}-->
                                 <option value="{$vo.car_id}" selected>
@@ -28,7 +28,7 @@
                                     <!--{/loop}-->
                             </select>
                             
-                            <div class="input-note">当前栏目的上级栏目</div>
+                            <div class="input-note">当前车辆的上级类别</div>
                         </div>
                     </div>
 
